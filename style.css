@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    background: #87ceeb;
+    border: 4px solid #228b22;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    display: block;
+    background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%);
+    border-bottom: 4px solid #228b22;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+#gameOver.show {
+    display: block;
+}
+
+#gameOver h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+#gameOver p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #ffd700;
+}
+
+#gameOver button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background: #228b22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#gameOver button:hover {
+    background: #32a852;
+}
+
+.hidden {
+    display: none;
+}
